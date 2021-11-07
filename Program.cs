@@ -14,7 +14,6 @@ namespace project_less
             Calculate(student);
 
             Console.WriteLine(student._age);
-            
             Console.ReadLine();
         }
         static void Calculate(Student student){
