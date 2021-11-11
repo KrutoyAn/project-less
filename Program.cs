@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Text;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace project_less
 {
@@ -7,17 +10,15 @@ namespace project_less
         static void Main(string[] args)
         {
             /*int myVar = 256;*/ 
-
             Student student = new Student();
-            student._age = 5;
-
-            Calculate(student);
-
-            Console.WriteLine(student._age);
-            Console.ReadLine();
+            student.Moving+= student_Moving;
+            
+            student.Move(7);
         }
-        static void Calculate(Student student){
-            student._age += 1;
+        static void student_Moving(object sender, MovingEventArgs e)
+        {
+           Console.WriteLine(e.Message);
         }
+
     }
 }
